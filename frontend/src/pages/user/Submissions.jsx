@@ -37,7 +37,7 @@ export const Submissions = () => {
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
-      if (!selectedFile.name.toLowerCase().endswith('.pdf')) {
+      if (!selectedFile.name.toLowerCase().endsWith('.pdf')) {
         setErrorMsg('Only PDF files are allowed.');
         setFile(null);
         e.target.value = null;

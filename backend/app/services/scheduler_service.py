@@ -40,22 +40,24 @@ def archive_stale_content():
                     details=f"Journal '{j.title}' auto-archived after {journal_days} days."
                 )
 
-        # 2. Archive Events (Archive after event completion OR age duration)
+        # 2. Archive Events (Archive after event completion by duration days)
         event_days = settings_dict.get("events", 30)  # Default 30 days
-        stale_events = db.query(Event).filter(
-            Event.is_archived == False,
-            Event.is_deleted == False,
-            (Event.date < now) | (Event.created_at < (now - timedelta(days=event_days)))
-        ).all()
-        for e in stale_events:
-            e.is_archived = True
-            log_action(
-                db,
-                action="AUTO_ARCHIVE",
-                target_type="event",
-                target_id=e.id,
-                details=f"Event '{e.title}' auto-archived after passing event date or age threshold."
-            )
+        if event_days > 0:
+            threshold = now - timedelta(days=event_days)
+            stale_events = db.query(Event).filter(
+                Event.is_archived == False,
+                Event.is_deleted == False,
+                Event.date < threshold
+            ).all()
+            for e in stale_events:
+                e.is_archived = True
+                log_action(
+                    db,
+                    action="AUTO_ARCHIVE",
+                    target_type="event",
+                    target_id=e.id,
+                    details=f"Event '{e.title}' auto-archived after {event_days} days from event date."
+                )
 
         # 3. Archive Gallery Items
         gallery_days = settings_dict.get("gallery", 365)  # Default 1 year

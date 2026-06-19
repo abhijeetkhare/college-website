@@ -463,7 +463,14 @@ export const AdminDashboard = () => {
                         <tbody>
                           {pendingJournals.map(j => (
                             <tr key={j.id}>
-                              <td className="text-light fw-bold">{j.title}</td>
+                              <td 
+                                className="text-black fw-bold"
+                                style={{
+                                  textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                                }}
+                              >
+                                {j.title}
+                              </td>
                               <td>{j.author_name}</td>
                               <td>{j.category}</td>
                               <td>{new Date(j.created_at).toLocaleDateString()}</td>
@@ -503,7 +510,14 @@ export const AdminDashboard = () => {
                       <tbody>
                         {allJournals.map(j => (
                           <tr key={j.id}>
-                            <td className="text-light fw-bold">{j.title}</td>
+                            <td 
+                              className="text-black fw-bold"
+                              style={{
+                                textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                              }}
+                            >
+                              {j.title}
+                            </td>
                             <td>{j.author_name}</td>
                             <td>{j.category}</td>
                             <td>
@@ -603,7 +617,14 @@ export const AdminDashboard = () => {
                       <tbody>
                         {events.map(ev => (
                           <tr key={ev.id}>
-                            <td className="text-light fw-bold">{ev.title}</td>
+                            <td 
+                              className="text-black fw-bold"
+                              style={{
+                                textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                              }}
+                            >
+                              {ev.title}
+                            </td>
                             <td>{new Date(ev.date).toLocaleDateString()}</td>
                             <td>{ev.location}</td>
                             <td>
@@ -801,7 +822,14 @@ export const AdminDashboard = () => {
                       <tbody>
                         {resources.map(res => (
                           <tr key={res.id}>
-                            <td className="text-light fw-bold">{res.title}</td>
+                            <td 
+                               className="text-black fw-bold"
+                               style={{
+                                 textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                               }}
+                             >
+                               {res.title}
+                             </td>
                             <td>{res.type}</td>
                             <td>{res.category}</td>
                             <td>{new Date(res.created_at).toLocaleDateString()}</td>
@@ -884,7 +912,14 @@ export const AdminDashboard = () => {
                         {usersList.map(u => (
                           <tr key={u.id}>
                             <td>{u.id}</td>
-                            <td className="text-light fw-bold">{u.full_name}</td>
+                            <td 
+                               className="text-black fw-bold"
+                               style={{
+                                 textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                               }}
+                             >
+                               {u.full_name}
+                             </td>
                             <td>{u.email}</td>
                             <td>
                               <select 
@@ -1016,7 +1051,14 @@ export const AdminDashboard = () => {
                             <tbody>
                               {list.map(item => (
                                 <tr key={item.id}>
-                                  <td className="text-light fw-bold">{item.title}</td>
+                                  <td 
+                                    className="text-black fw-bold"
+                                    style={{
+                                      textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                                    }}
+                                  >
+                                    {item.title}
+                                  </td>
                                   <td>{new Date(item.deleted_at).toLocaleDateString()}</td>
                                   <td>
                                     <div className="d-flex gap-2">

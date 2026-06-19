@@ -26,33 +26,41 @@ export const MUNPage = () => {
 
   const committees = [
     {
-      acronym: "UNSC",
-      name: "United Nations Security Council",
-      agenda: "Maintaining international peace and security; addressing escalating border crises.",
+      acronym: "UNGA",
+      name: "UNITED NATIONS GENERAL ASSEMBLY",
+      agenda: "Combating the Proliferation of Autonomous and AI-Powered Weapon Systems.",
       level: "Advanced",
       delegates: "30 Delegates"
     },
     {
-      acronym: "DISEC",
-      name: "Disarmament & International Security Committee",
-      agenda: "Preventing weaponization of outer space and proliferation of automated cyber warfare.",
+      acronym: "HCC",
+      name: "HISTORIC CRISIS COMMITTEE",
+      agenda: "Managing Territorial Sovereignty, Strategic Security, and Diplomatic Breakdown in the Context of the 1962 Sino-Indian Conflict",
       level: "Intermediate",
       delegates: "50 Delegates"
     },
     {
-      acronym: "UNHCR",
-      name: "United Nations High Commissioner for Refugees",
-      agenda: "Formulating legal frameworks for protecting climate-induced displaced refugees.",
+      acronym: "AIPPM",
+      name: "ALL INDIA POLITICAL PARTIES MEET",
+      agenda: "Balancing National Security and Civil Liberties: Evaluating the Application of the Unlawful Activities (Prevention) Act (UAPA) in Internal Conflict Zones.",
       level: "Beginner Friendly",
       delegates: "60 Delegates"
     },
     {
-      acronym: "AIPPM",
-      name: "All India Political Parties Meet",
-      agenda: "Evaluating federalism, administrative reforms, and electoral security in emerging sectors.",
+      acronym: "UNHRC",
+      name: "UNITED NATIONS HUMAN RIGHTS COUNCIL",
+      agenda: "The agenda looks at how far governments can go in monitoring citizens in the name of national security. From phone tapping to facial recognition and digital tracking, the debate focuses on privacy rights, misuse of data, and whether existing international human rights laws are strong enough to protect individuals",
+      level: "Bilingual (Hindi/English)",
+      delegates: "45 Delegates"
+    },
+    {
+      acronym: "UNEP",
+      name: "UNITED NATIONS ENVIORNMENTAL PROGRAMME",
+      agenda: "Deliberation on Shortcomings and Implementation Challenges of the Paris Agreement.",
       level: "Bilingual (Hindi/English)",
       delegates: "45 Delegates"
     }
+
   ];
 
   return (
@@ -68,8 +76,7 @@ export const MUNPage = () => {
               </div>
               <h1 className="display-4 fw-bold display-font text-light mb-3 glow-text">Model United Nations Division</h1>
               <p className="lead text-secondary mb-4" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-                The Model United Nations (MUN) Division of **The Round Table** is Kirori Mal College's flagship diplomatic simulation cell. 
-                We train DU students in standard foreign policy research, public speaking, multilateral negotiation, and UN Rules of Procedure (RoP).
+                The Round Table Society, Kirori Mal College has been organizing KMCMUN successfully since past 8 years Model United Nations or MUN, is an educational model of the United Nations used for simulations in which students learn about diplomacy and international relations. The previous eight conferences were a resounding success and have proved to be one of the most widely appreciated Conferences in the Delhi MUN circuit.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <a href="#committees" className="btn glow-btn">Show Committees</a>
@@ -100,7 +107,7 @@ export const MUNPage = () => {
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <h3 className="display-font text-warning mb-0 glow-text fw-bold">{com.acronym}</h3>
-                    <span className="badge bg-warning text-dark px-3 py-1 rounded small fw-bold">{com.level}</span>
+                    {/* <span className="badge bg-warning text-dark px-3 py-1 rounded small fw-bold">{com.level}</span> */}
                   </div>
                   <h5 className="text-light display-font mb-2">{com.name}</h5>
                   <p className="text-secondary small mb-4" style={{ lineHeight: '1.6' }}>
@@ -109,7 +116,7 @@ export const MUNPage = () => {
                 </div>
                 <div className="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center text-secondary small">
                   <span className="d-flex align-items-center gap-1.5"><FaUserTie className="text-warning" /> {com.delegates}</span>
-                  <span className="text-warning">Rules: UNA-USA / High School</span>
+                  {/* <span className="text-warning">Rules: UNA-USA / High School</span> */}
                 </div>
               </div>
             </div>

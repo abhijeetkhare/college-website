@@ -120,6 +120,48 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* THE EXECUTIVE BOARD 26-27 */}
+              <div className="m-5 text-center">
+                <h3 className="display-font text-warning mb-5 glow-text">The Executive Board (2026-27)</h3>
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="row g-4"
+                >
+                  {[
+                    { role: "President", name: "Vansh Srivastava", dept: "Political Science, Year III", image: "/images/VanshSrivastava.jpeg" },
+                    { role: "Vice President", name: "Saanvi Duggal", dept: "English Literature, Year III", image: "/images/SaanviDuggal.jpeg" },
+                    { role: "Secretary ", name: "Bhoomika Sahu", dept: "Economics, Year III", image: "/images/BhoomikaSahu.jpeg" },
+                    { role: "Cordinators", name: "Prashasya Srivastava", dept: "History, Year III", image: "/images/Prashasya.jpeg" },
+                    { role: "MUN Head", name: "Chaitanya Raghav", dept: "History, Year III", image: "/images/Chaitanya.jpeg" },
+                    { role: "IT & Design Head", name: "Happy Kapasia", dept: "History, Year III", image: "/images/HappyKapasia.jpeg" },
+                    { role: "Research & Development Head", name: "Vanshika Sharma", dept: "History, Year III", image: "/images/VanshikaSharma.jpeg" },
+                    { role: "Research & Development Head", name: "Kanishka ", dept: "History, Year III", image: "/images/Kanishka.jpeg" },
+                    { role: "Creatives & Promotions Head", name: "Prajanya Parihar", dept: "History, Year III", image: "/images/Prajanya.jpeg" },
+                    { role: "Marketing Head", name: "Vanshika Wadhwa", dept: "History, Year II", image: "/images/VanshikaWadhwa.jpeg" },
+                    { role: "Event Mangement Head", name: "Aksh Giri", dept: "History, Year III", image: "/images/AkshGiri.jpeg" },
+                    { role: "Event Mangement Head", name: "Ananya Indhu", dept: "History, Year III", image: "/images/AnanyaIndhu.jpeg" },
+                    { role: "Corporate handling and content head", name: "Pragati Sharma ", dept: "History, Year III", image: "/images/PragatiSharma.jpeg" }
+
+                  ].map((member, idx) => (
+                    <motion.div key={idx} variants={itemVariants} className="col-md-3">
+                      <div className="p-4 rounded-4 glass-card border border-warning text-center h-100" style={{ background: 'rgba(17, 24, 39, 0.4)' }}>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="rounded-circle mb-3 border border-warning img-fluid mx-auto"
+                          style={{ width: '80px', height: '80px', objectFit: 'cover' }}
+                        />
+                        <h6 className="text-warning small tracking-wide uppercase fw-bold mb-1">{member.role}</h6>
+                        <h5 className="text-light display-font mb-1">{member.name}</h5>
+                        {/* <span className="text-secondary small d-block">{member.dept}</span> */}
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+
       {/* DYNAMIC INFORMATION SECTIONS (Events, News, Journals) */}
       <section className="py-5" style={{ backgroundColor: '#090d16' }}>
         <div className="container">

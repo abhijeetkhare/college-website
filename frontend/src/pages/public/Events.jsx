@@ -101,7 +101,14 @@ export const Events = () => {
                           <span className="text-warning small fw-bold mb-2">
                             {new Date(event.date).toLocaleDateString(undefined, { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
                           </span>
-                          <h5 className="card-title text-light display-font mb-3">{event.title}</h5>
+                          <h5
+                            className="card-title text-black fw-bold mb-3"
+                            style={{
+                              textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                            }}
+                          >
+                            {event.title}
+                          </h5>
                           <p className="card-text text-secondary small mb-4 flex-grow-1" style={{ lineHeight: '1.6' }}>
                             {event.description}
                           </p>
@@ -158,7 +165,14 @@ export const Events = () => {
                           <span className="text-secondary small mb-1">
                             {new Date(event.date).toLocaleDateString()}
                           </span>
-                          <h6 className="card-title text-light display-font mb-2">{event.title}</h6>
+                          <h6
+                            className="card-title text-black fw-bold mb-2"
+                            style={{
+                              textShadow: "0 2px 4px rgba(255,255,255,0.8)"
+                            }}
+                          >
+                            {event.title}
+                          </h6>
                           <p className="card-text text-secondary small flex-grow-1" style={{ fontSize: '0.8rem' }}>
                             {event.description}
                           </p>

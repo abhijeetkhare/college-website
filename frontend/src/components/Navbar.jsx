@@ -12,6 +12,19 @@ export const Navbar = () => {
     navigate('/');
   };
 
+  const closeNavbar = (e) => {
+    if (e.target.classList.contains('dropdown-toggle')) {
+      return;
+    }
+    const collapseEl = document.getElementById('navbarNav');
+    if (collapseEl && collapseEl.classList.contains('show')) {
+      const toggler = document.querySelector('.navbar-toggler');
+      if (toggler) {
+        toggler.click();
+      }
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: 'rgba(11, 15, 25, 0.85)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(197, 168, 92, 0.2)' }}>
       <div className="container">
@@ -32,7 +45,7 @@ export const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="navbarNav" onClick={closeNavbar}>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li className="nav-item">
               <Link className="nav-link text-light px-3" to="/">Home</Link>

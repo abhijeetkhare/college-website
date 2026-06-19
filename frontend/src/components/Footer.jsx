@@ -67,8 +67,19 @@ export const Footer = () => {
           <p className="text-secondary small mb-0">
             &copy; {new Date().getFullYear()} The Round Table, KMC. All Rights Reserved.
           </p>
-          <p className="text-secondary small mb-0">
-            Designed & Developed for Kirori Mal College, Delhi University.
+          <p className="text-secondary small mb-0 d-flex align-items-center flex-wrap gap-2 justify-content-center justify-content-sm-end">
+            <span>Designed & Developed by Abhijeet Khare</span>
+            <span className="d-inline-flex gap-3 ms-2 fs-6">
+              <a href="https://www.linkedin.com/in/abhijeetkhare3107/" target="_blank" rel="noreferrer" className="text-secondary hover-gold transition" title="LinkedIn Profile">
+                <FaLinkedin />
+              </a>
+              <a href="mailto:ab310702@gmail.com" className="text-secondary hover-gold transition" title="Email: ab310702@gmail.com">
+                <FaEnvelope />
+              </a>
+              <a href="tel:7376937588" className="text-secondary hover-gold transition" title="Phone: +91-73769-37588">
+                <FaPhone style={{ transform: 'rotate(90deg)' }} />
+              </a>
+            </span>
           </p>
         </div>
       </div>

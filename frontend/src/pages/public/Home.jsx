@@ -41,8 +41,8 @@ export const Home = () => {
                 <div className="d-inline-flex align-items-center mb-3 px-3 py-1.5 rounded-pill glass-card border border-warning" style={{ background: 'rgba(197,168,92,0.08)' }}>
                   <span className="text-warning small fw-bold tracking-wide">KIRORI MAL COLLEGE • DELHI UNIVERSITY</span>
                 </div>
-                <h1 className="display-3 fw-bold text-light mb-4" style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.15 }}>
-                  The Round Table <br />
+                <h1 className="display-3 fw-bold text-light mb-4" style={{ lineHeight: 1.15 }}>
+                  <span className="brand-font">THE R<span style={{ color: 'var(--accent-red)' }}>O</span>UND TABLE</span> <br />
                   <span className="text-warning glow-text">Society</span>
                 </h1>
                 <p className="lead text-secondary mb-5" style={{ fontSize: '1.15rem', lineHeight: '1.8' }}>
@@ -141,7 +141,7 @@ export const Home = () => {
                     { role: "Creatives & Promotions Head", name: "Prajanya Parihar", dept: "History, Year III", image: "/images/Prajanya.jpeg" },
                     { role: "Marketing Head", name: "Vanshika Wadhwa", dept: "History, Year II", image: "/images/VanshikaWadhwa.jpeg" },
                     { role: "Event Mangement Head", name: "Aksh Giri", dept: "History, Year III", image: "/images/AkshGiri.jpeg" },
-                    { role: "Event Mangement Head", name: "Ananya Indhu", dept: "History, Year III", image: "/images/AnanyaIndhu.jpeg" },
+                    { role: "Event Mangement Head", name: "Ananya Indhu Sundar", dept: "History, Year III", image: "/images/AnanyaIndhu.jpeg" },
                     { role: "Corporate handling and content head", name: "Pragati Sharma ", dept: "History, Year III", image: "/images/PragatiSharma.jpeg" }
 
                   ].map((member, idx) => (

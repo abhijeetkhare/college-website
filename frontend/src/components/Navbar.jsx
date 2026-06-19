@@ -36,7 +36,9 @@ export const Navbar = () => {
             style={{ width: '40px', height: '40px', objectFit: 'cover' }}
           />
           <div>
-            <span className="fw-bold glow-text text-warning" style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.25rem' }}>The Round Table</span>
+            <span className="fw-bold glow-text text-light brand-font" style={{ fontSize: '1.25rem' }}>
+              THE R<span style={{ color: 'var(--accent-red)' }}>O</span>UND TABLE
+            </span>
             <span className="d-block text-secondary" style={{ fontSize: '0.65rem', trackingSpacing: '1px' }}>KMC, DELHI UNIVERSITY</span>
           </div>
         </Link>

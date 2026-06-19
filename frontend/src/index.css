@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+.brand-font {
+  font-family: 'Trajan Pro 3', 'Trajan Pro', 'Cinzel', serif !important;
+  letter-spacing: 0.05em;
+}
 
 :root {
   --primary-bg: #050505;       /* Pure Velvet Black */
   --secondary-bg: #121212;     /* Charcoal Dark Gray */
-  --accent-red: #e11d48;       /* Deep Vibrant Crimson Red */
-  --accent-red-hover: #be123c; /* Velvet Dark Red */
+  --accent-red: #9a0000;       /* Strong Blood Red */
+  --accent-red-hover: #700000; /* Darker Blood Red */
   --text-primary: #ffffff;     /* Pure Snow White */
   --text-secondary: #a3a3a3;   /* Slate Light Gray */
-  --border-color: rgba(225, 29, 72, 0.25);
+  --border-color: rgba(154, 0, 0, 0.25);
   --glass-bg: rgba(18, 18, 18, 0.85);
   --glass-border: rgba(255, 255, 255, 0.05);
 
@@ -59,12 +64,12 @@ h1, h2, h3, h4, h5, h6, .display-font {
 .glass-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent-red);
-  box-shadow: 0 12px 40px 0 rgba(225, 29, 72, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(154, 0, 0, 0.25);
 }
 
 /* Glowing Elements */
 .glow-text {
-  text-shadow: 0 0 12px rgba(225, 29, 72, 0.6);
+  text-shadow: 0 0 12px rgba(154, 0, 0, 0.6);
 }
 
 .glow-btn {
@@ -72,13 +77,13 @@ h1, h2, h3, h4, h5, h6, .display-font {
   color: #ffffff !important;
   font-weight: 600;
   border: none;
-  box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+  box-shadow: 0 0 15px rgba(154, 0, 0, 0.4);
   transition: all 0.3s ease;
   border-radius: 8px;
   padding: 10px 24px;
 }
 .glow-btn:hover {
-  box-shadow: 0 0 25px rgba(225, 29, 72, 0.8);
+  box-shadow: 0 0 25px rgba(154, 0, 0, 0.8);
   transform: translateY(-2px);
 }
 
@@ -92,7 +97,7 @@ h1, h2, h3, h4, h5, h6, .display-font {
   padding: 10px 24px;
 }
 .outline-gold-btn:hover {
-  background: rgba(225, 29, 72, 0.1);
+  background: rgba(154, 0, 0, 0.1);
   color: #fff !important;
   border-color: #fff !important;
   transform: translateY(-2px);
@@ -100,7 +105,7 @@ h1, h2, h3, h4, h5, h6, .display-font {
 
 /* Layout Padding & Hero Section */
 .hero-gradient {
-  background: radial-gradient(circle at top right, rgba(225, 29, 72, 0.18), transparent 60%),
+  background: radial-gradient(circle at top right, rgba(154, 0, 0, 0.18), transparent 60%),
               radial-gradient(circle at bottom left, rgba(18, 18, 18, 0.95), var(--primary-bg));
   min-height: 90vh;
   display: flex;
@@ -146,7 +151,7 @@ h1, h2, h3, h4, h5, h6, .display-font {
   border: 1px solid var(--glass-border);
 }
 .table-custom th {
-  background: rgba(225, 29, 72, 0.12);
+  background: rgba(154, 0, 0, 0.12);
   color: var(--accent-red);
   border-color: var(--glass-border);
 }

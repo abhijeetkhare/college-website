@@ -8,7 +8,9 @@ export const Footer = () => {
       <div className="container">
         <div className="row g-4">
           <div className="col-lg-5 col-md-12">
-            <h5 className="display-font text-warning mb-3 fw-bold glow-text">The Round Table</h5>
+            <h5 className="brand-font text-light mb-3 fw-bold glow-text">
+              THE R<span style={{ color: 'var(--accent-red)' }}>O</span>UND TABLE
+            </h5>
             <p className="text-secondary small" style={{ lineHeight: '1.7' }}>
               The 2025–26 session reflected The Round Table’s commitment to intellectual engagement, meaningful dialogue, and institutional growth. With a successful return to offline functioning, the society strengthened participation through discussions, simulations, events, and an Orientation Programme that welcomed and integrated new members into its vibrant community.
             </p>

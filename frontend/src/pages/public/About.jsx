@@ -66,7 +66,7 @@ export const About = () => {
           {[
             { icon: <FaBookmark className="text-warning fs-3" />, title: "Intellectual Rigor", text: "Providing standard training in diplomatic writing, research methodologies, and logical debating techniques." },
             { icon: <FaGraduationCap className="text-warning fs-3" />, title: "Academic Outreach", text: "Publishing student journals annually and maintaining a free database of research papers and country guides." },
-            { icon: <FaAward className="text-warning fs-3" />, title: "diplomatic Podiums", text: "Fostering standard Model United Nations delegates and representing Delhi University at national events." }
+            { icon: <FaAward className="text-warning fs-3" />, title: "Diplomatic Podiums", text: "Fostering standard Model United Nations delegates and representing Delhi University at national events." }
           ].map((item, idx) => (
             <div key={idx} className="col-md-4">
               <div className="p-4 rounded-4 glass-card border border-warning h-100" style={{ background: 'rgba(17, 24, 39, 0.4)' }}>
@@ -81,7 +81,7 @@ export const About = () => {
         </div>
 
         
-        {/* TIMELINE SECTION */}
+        {/* TIMELINE SECTION
         <div className="my-5 py-3">
           <h3 className="display-font text-warning text-center mb-5 glow-text">Historical Milestones</h3>
           <div className="timeline-container mx-auto" style={{ maxWidth: '800px' }}>
@@ -98,7 +98,7 @@ export const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* THE EXECUTIVE BOARD 25-26 */}
         <div className="mt-5 text-center">

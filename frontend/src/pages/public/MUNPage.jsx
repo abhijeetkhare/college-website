@@ -26,40 +26,61 @@ export const MUNPage = () => {
 
   const committees = [
     {
-      acronym: "UNGA",
-      name: "UNITED NATIONS GENERAL ASSEMBLY",
-      agenda: "Combating the Proliferation of Autonomous and AI-Powered Weapon Systems.",
+      acronym: "UNC",
+      name: "UNITED NATIONS Committee",
+      agenda: "The United Nations Committee system serves as a platform for international dialogue, cooperation and decision making on matters of global importance. Through its various committees and specialized bodies, the United Nations addresses a wide range of issues, including international peace and security, human rights, sustainable development, gender equality and humanitarian affairs. Committees such as the United Nations General Assembly (UNGA) and the Commission on the Status of Women (CSW) provide member states with the opportunity to deliberate on challenges, formulate policies and work collectively towards achieving the objectives and principles of the United Nations Charter.",
       level: "Advanced",
       delegates: "30 Delegates"
     },
     {
-      acronym: "HCC",
-      name: "HISTORIC CRISIS COMMITTEE",
-      agenda: "Managing Territorial Sovereignty, Strategic Security, and Diplomatic Breakdown in the Context of the 1962 Sino-Indian Conflict",
-      level: "Intermediate",
-      delegates: "50 Delegates"
+      acronym: "IP",
+      name: "International Press ",
+      agenda: "The International Press serves as the media wing of a Model United Nations conference, responsible for documenting proceedings, reporting on committee developments and facilitating the flow of information among delegates and observers. Through journalism, photography, interviews,and editorial coverage, the International Press promotes transparency, encourages informed discussion and highlights the key debates and outcomes of the conference. It plays a vital role in capturing the dynamics of diplomacy while upholding the principles of accuracy, professionalism and impartial reporting.",
+      level: "Advanced",
+      delegates: "30 Delegates"
     },
     {
-      acronym: "AIPPM",
-      name: "ALL INDIA POLITICAL PARTIES MEET",
-      agenda: "Balancing National Security and Civil Liberties: Evaluating the Application of the Unlawful Activities (Prevention) Act (UAPA) in Internal Conflict Zones.",
-      level: "Beginner Friendly",
-      delegates: "60 Delegates"
-    },
-    {
-      acronym: "UNHRC",
-      name: "UNITED NATIONS HUMAN RIGHTS COUNCIL",
-      agenda: "The agenda looks at how far governments can go in monitoring citizens in the name of national security. From phone tapping to facial recognition and digital tracking, the debate focuses on privacy rights, misuse of data, and whether existing international human rights laws are strong enough to protect individuals",
-      level: "Bilingual (Hindi/English)",
-      delegates: "45 Delegates"
-    },
-    {
-      acronym: "UNEP",
-      name: "UNITED NATIONS ENVIORNMENTAL PROGRAMME",
-      agenda: "Deliberation on Shortcomings and Implementation Challenges of the Paris Agreement.",
-      level: "Bilingual (Hindi/English)",
-      delegates: "45 Delegates"
+      acronym: "IC",
+      name: "Indian Committees ",
+      agenda: "Indian Committees in Model United Nations provide participants with an opportunity to engage with the political, legislative and policy making processes of India. These committees simulate the functioning of key national institutions and forums, encouraging delegates to debate contemporary issues, formulate policies and represent diverse political perspectives. Committees such as the Lok Sabha and the All India Political Parties Meet (AIPPM) foster critical thinking, public speaking, negotiation and a deeper understanding of India's democratic framework and governance mechanisms.",
+      level: "Advanced",
+      delegates: "30 Delegates"
     }
+    // {
+    //   acronym: "UNGA",
+    //   name: "UNITED NATIONS GENERAL ASSEMBLY",
+    //   agenda: "Combating the Proliferation of Autonomous and AI-Powered Weapon Systems.",
+    //   level: "Advanced",
+    //   delegates: "30 Delegates"
+    // },
+    // {
+    //   acronym: "HCC",
+    //   name: "HISTORIC CRISIS COMMITTEE",
+    //   agenda: "Managing Territorial Sovereignty, Strategic Security, and Diplomatic Breakdown in the Context of the 1962 Sino-Indian Conflict",
+    //   level: "Intermediate",
+    //   delegates: "50 Delegates"
+    // },
+    // {
+    //   acronym: "AIPPM",
+    //   name: "ALL INDIA POLITICAL PARTIES MEET",
+    //   agenda: "Balancing National Security and Civil Liberties: Evaluating the Application of the Unlawful Activities (Prevention) Act (UAPA) in Internal Conflict Zones.",
+    //   level: "Beginner Friendly",
+    //   delegates: "60 Delegates"
+    // },
+    // {
+    //   acronym: "UNHRC",
+    //   name: "UNITED NATIONS HUMAN RIGHTS COUNCIL",
+    //   agenda: "The agenda looks at how far governments can go in monitoring citizens in the name of national security. From phone tapping to facial recognition and digital tracking, the debate focuses on privacy rights, misuse of data, and whether existing international human rights laws are strong enough to protect individuals",
+    //   level: "Bilingual (Hindi/English)",
+    //   delegates: "45 Delegates"
+    // },
+    // {
+    //   acronym: "UNEP",
+    //   name: "UNITED NATIONS ENVIORNMENTAL PROGRAMME",
+    //   agenda: "Deliberation on Shortcomings and Implementation Challenges of the Paris Agreement.",
+    //   level: "Bilingual (Hindi/English)",
+    //   delegates: "45 Delegates"
+    // }
 
   ];
 
@@ -76,7 +97,7 @@ export const MUNPage = () => {
               </div>
               <h1 className="display-4 fw-bold display-font text-light mb-3 glow-text">Model United Nations Division</h1>
               <p className="lead text-secondary mb-4" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-                The Round Table Society, Kirori Mal College has been organizing KMCMUN successfully since past 8 years Model United Nations or MUN, is an educational model of the United Nations used for simulations in which students learn about diplomacy and international relations. The previous eight conferences were a resounding success and have proved to be one of the most widely appreciated Conferences in the Delhi MUN circuit.
+                The Round Table Society, Kirori Mal College has been organizing KMCMUN successfully since past 8 years Model. United Nations or MUN, is an educational model of the United Nations used for simulations in which students learn about diplomacy and international relations. The previous eight conferences were a resounding success and have proved to be one of the most widely appreciated Conferences in the Delhi MUN circuit.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <a href="#committees" className="btn glow-btn">Show Committees</a>

@@ -133,7 +133,7 @@ export const Home = () => {
                     { role: "President", name: "Vansh Srivastava", dept: "Political Science, Year III", image: "/images/VanshSrivastava.jpeg" },
                     { role: "Vice President", name: "Saanvi Duggal", dept: "English Literature, Year III", image: "/images/SaanviDuggal.jpeg" },
                     { role: "Secretary ", name: "Bhoomika Sahu", dept: "Economics, Year III", image: "/images/BhoomikaSahu.jpeg" },
-                    { role: "Cordinators", name: "Prashasya Srivastava", dept: "History, Year III", image: "/images/Prashasya.jpeg" },
+                    { role: "Coordinator", name: "Prashasya Srivastava", dept: "History, Year III", image: "/images/Prashasya.jpeg" },
                     { role: "MUN Head", name: "Chaitanya Raghav", dept: "History, Year III", image: "/images/Chaitanya.jpeg" },
                     { role: "IT & Design Head", name: "Happy Kapasia", dept: "History, Year III", image: "/images/HappyKapasia.jpeg" },
                     { role: "Research & Development Head", name: "Vanshika Sharma", dept: "History, Year III", image: "/images/VanshikaSharma.jpeg" },

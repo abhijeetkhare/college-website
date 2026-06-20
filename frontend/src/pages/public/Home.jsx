@@ -236,11 +236,11 @@ export const Home = () => {
               </motion.div>
             </div>
 
-            {/* FEATURED JOURNALS COLUMN */}
+            {/* FEATURED PUBLICATIONS COLUMN */}
             <div className="col-lg-4">
               <motion.div variants={itemVariants} className="h-100 p-4 rounded-4 glass-card border border-warning" style={{ background: 'rgba(17, 24, 39, 0.5)' }}>
                 <h4 className="display-font text-warning mb-4 d-flex align-items-center">
-                  <FaTrophy className="me-2" /> Featured Journals
+                  <FaTrophy className="me-2" /> Featured Publications
                 </h4>
                 {journals.length > 0 ? (
                   <div className="d-flex flex-column gap-3">
@@ -262,7 +262,7 @@ export const Home = () => {
                 )}
                 <div className="text-end mt-4">
                   <Link to="/journals" className="text-warning text-decoration-none small d-flex align-items-center justify-content-end gap-1">
-                    Browse Journals <FaChevronRight style={{ fontSize: '0.6rem' }} />
+                    Browse Research & Publication <FaChevronRight style={{ fontSize: '0.6rem' }} />
                   </Link>
                 </div>
               </motion.div>

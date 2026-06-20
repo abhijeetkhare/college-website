@@ -29,7 +29,7 @@ export const Footer = () => {
               <li><Link to="/about" className="text-secondary text-decoration-none hover-gold transition">About the Society</Link></li>
               <li><Link to="/events" className="text-secondary text-decoration-none hover-gold transition">Events Showcase</Link></li>
               <li><Link to="/gallery" className="text-secondary text-decoration-none hover-gold transition">Media Gallery</Link></li>
-              <li><Link to="/journals" className="text-secondary text-decoration-none hover-gold transition">Society Journals</Link></li>
+              <li><Link to="/journals" className="text-secondary text-decoration-none hover-gold transition">Research & Publication</Link></li>
               <li><Link to="/mun" className="text-warning text-decoration-none hover-gold transition fw-semibold">MUN Division</Link></li>
               <li><Link to="/contact" className="text-secondary text-decoration-none hover-gold transition">Contact Us</Link></li>
             </ul>

@@ -9,9 +9,10 @@ export const Submissions = () => {
   // Form states
   const [title, setTitle] = useState('');
   const [abstract, setAbstract] = useState('');
-  const [category, setCategory] = useState('General');
+  const [category, setCategory] = useState('Research Paper');
   const [tags, setTags] = useState('');
   const [file, setFile] = useState(null);
+  const [adheresToGuidelines, setAdheresToGuidelines] = useState(false);
   
   const [uploading, setUploading] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
@@ -58,6 +59,11 @@ export const Submissions = () => {
       return;
     }
 
+    if (!adheresToGuidelines) {
+      setErrorMsg('You must certify that your submission adheres to the guidelines.');
+      return;
+    }
+
     setUploading(true);
     const formData = new FormData();
     formData.append('title', title);
@@ -72,18 +78,19 @@ export const Submissions = () => {
           'Content-Type': 'multipart/form-data'
         }
       });
-      setSuccessMsg('Your journal has been uploaded and sent for peer evaluation!');
+      setSuccessMsg('Your submission has been uploaded and sent for peer evaluation!');
       setTitle('');
       setAbstract('');
-      setCategory('General');
+      setCategory('Research Paper');
       setTags('');
       setFile(null);
+      setAdheresToGuidelines(false);
       e.target.reset(); // clear file input in DOM
       setUploading(false);
       fetchMySubmissions(); // refresh history
     } catch (err) {
       setUploading(false);
-      setErrorMsg(err.response?.data?.detail || 'Failed to submit journal. Please try again.');
+      setErrorMsg(err.response?.data?.detail || 'Failed to submit. Please try again.');
     }
   };
 
@@ -98,7 +105,7 @@ export const Submissions = () => {
     }
   };
 
-  const categories = ['General', 'Politics', 'Literature', 'Economics', 'Diplomacy'];
+  const categories = ['Research Paper', 'Research Article'];
 
   return (
     <div className="py-5" style={{ backgroundColor: '#0b0f19', minHeight: '90vh' }}>
@@ -106,9 +113,9 @@ export const Submissions = () => {
         {/* HEADER */}
         <div className="text-center mb-5">
           <span className="text-warning small fw-bold tracking-wider uppercase glow-text">EDITORIAL WORKFLOW</span>
-          <h1 className="display-4 fw-bold display-font text-light mt-2 mb-3">Journal Submissions</h1>
+          <h1 className="display-4 fw-bold display-font text-light mt-2 mb-3">Research & Publication Submissions</h1>
           <p className="text-secondary mx-auto lead" style={{ maxWidth: '650px', fontSize: '1rem' }}>
-            Submit your research paper or track approval timelines on your active drafts.
+            Submit your research paper or article, and track approval timelines on your active drafts.
           </p>
         </div>
 
@@ -117,8 +124,24 @@ export const Submissions = () => {
           <div className="col-lg-5 text-start">
             <div className="p-4 rounded-4 glass-card border border-warning" style={{ background: 'rgba(17, 24, 39, 0.65)' }}>
               <h4 className="display-font text-warning mb-4 glow-text d-flex align-items-center gap-2">
-                <FaUpload /> Submit New Paper
+                <FaUpload /> Submit New Work
               </h4>
+
+              {/* Guidelines summary info */}
+              <div className="p-3 mb-4 rounded bg-dark border border-secondary border-opacity-50 text-secondary small" style={{ background: 'rgba(5, 5, 5, 0.45)' }}>
+                <h6 className="text-warning fw-bold mb-2">Formatting Formats & Guidelines:</h6>
+                <ul className="ps-3 mb-2 d-flex flex-column gap-1 list-unstyled">
+                  <li className="mb-2">
+                    <span className="badge bg-warning text-dark me-1">Research Paper:</span> 
+                    Requires standard academic layout, introduction, methodology, data presentation/analysis, findings discussion, and bibliographic references.
+                  </li>
+                  <li>
+                    <span className="badge bg-warning text-dark me-1">Research Article:</span> 
+                    Features analytical essay style, argument-driven focus, structured thematic subheadings, and bibliography.
+                  </li>
+                </ul>
+                <span className="text-secondary d-block mt-2" style={{ fontSize: '0.75rem' }}>Please verify your draft conforms to these structures before uploading.</span>
+              </div>
 
               {successMsg && (
                 <div className="alert alert-success border-0 text-success bg-success bg-opacity-10 py-2.5 px-3 rounded small mb-4" role="alert">
@@ -194,10 +217,24 @@ export const Submissions = () => {
                   <span className="text-secondary d-block mt-1" style={{ fontSize: '0.7rem' }}>Only standard .pdf attachments accepted (Max 15MB).</span>
                 </div>
 
+                <div className="form-check mb-4">
+                  <input
+                    className="form-check-input border-warning"
+                    type="checkbox"
+                    id="guidelinesCheck"
+                    checked={adheresToGuidelines}
+                    onChange={e => setAdheresToGuidelines(e.target.checked)}
+                    required
+                  />
+                  <label className="form-check-label text-secondary small" htmlFor="guidelinesCheck">
+                    I certify that my submission strictly adheres to the Research & Publication Guidelines.
+                  </label>
+                </div>
+
                 <button
                   type="submit"
                   className="btn glow-btn w-100 py-2.5 d-flex align-items-center justify-content-center gap-2"
-                  disabled={uploading}
+                  disabled={uploading || !adheresToGuidelines}
                 >
                   {uploading ? (
                     <span className="spinner-border spinner-border-sm" role="status"></span>

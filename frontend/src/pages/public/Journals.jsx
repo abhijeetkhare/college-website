@@ -9,17 +9,17 @@ export const Journals = () => {
   const [journals, setJournals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('');
+  const [activeTab, setActiveTab] = useState('Research Paper');
 
   useEffect(() => {
     fetchJournals();
-  }, [category]);
+  }, [activeTab]);
 
   const fetchJournals = () => {
     setLoading(true);
     let url = '/api/journals';
     const params = [];
-    if (category) params.push(`category=${category}`);
+    params.push(`category=${activeTab}`);
     if (search) params.push(`search=${search}`);
     if (params.length > 0) url += `?${params.join('&')}`;
 
@@ -39,28 +39,45 @@ export const Journals = () => {
     fetchJournals();
   };
 
-  const categories = ['All', 'Politics', 'Literature', 'Economics', 'Diplomacy', 'General'];
-
   return (
     <div className="py-5" style={{ backgroundColor: '#0b0f19', minHeight: '90vh' }}>
       <div className="container">
         {/* HEADER */}
         <div className="text-center mb-5">
           <span className="text-warning small fw-bold tracking-wider uppercase glow-text">ACADEMIC ARCHIVES</span>
-          <h1 className="display-4 fw-bold display-font text-light mt-2 mb-3">Society Journals</h1>
+          <h1 className="display-4 fw-bold display-font text-light mt-2 mb-3">Research & Publication</h1>
           <p className="text-secondary mx-auto lead" style={{ maxWidth: '650px', fontSize: '1rem' }}>
-            Browse through approved student journals, research papers, and literary essays compiled by our members.
+            Browse through approved student research papers and analytical articles compiled by our members.
           </p>
         </div>
 
-        {/* SEARCH AND FILTER BAR */}
+        {/* SUB-TABS FOR PAPERS & ARTICLES */}
+        <div className="d-flex justify-content-center mb-4">
+          <div className="btn-group glass-card p-1 border border-warning" role="group">
+            {[
+              { id: 'Research Paper', label: 'Research Papers' },
+              { id: 'Research Article', label: 'Research Articles' }
+            ].map(tab => (
+              <button
+                key={tab.id}
+                type="button"
+                className={`btn py-2 px-4 rounded ${activeTab === tab.id ? 'btn-warning text-dark fw-bold' : 'btn-link text-secondary text-decoration-none'}`}
+                onClick={() => setActiveTab(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* SEARCH BAR */}
         <div className="row g-3 justify-content-center mb-5">
           <div className="col-lg-6">
             <form onSubmit={handleSearchSubmit} className="d-flex glass-card p-1 border border-warning">
               <input
                 type="text"
                 className="form-control bg-transparent border-0 text-light px-3 py-2"
-                placeholder="Search journals by title, abstract..."
+                placeholder={`Search within ${activeTab}s...`}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
               />
@@ -69,32 +86,20 @@ export const Journals = () => {
               </button>
             </form>
           </div>
-          <div className="col-lg-3">
-            <select
-              className="form-select bg-dark border-warning text-warning p-2.5 h-100 rounded"
-              value={category}
-              onChange={e => setCategory(e.target.value === 'All' ? '' : e.target.value)}
-            >
-              <option value="">Filter by Category</option>
-              {categories.map(cat => (
-                <option key={cat} value={cat}>{cat}</option>
-              ))}
-            </select>
-          </div>
         </div>
 
         {/* SUBMISSION CALLOUT */}
         <div className="p-4 rounded-4 glass-card border border-warning text-start mb-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4" style={{ background: 'rgba(197, 168, 92, 0.05)' }}>
           <div>
-            <h5 className="text-warning display-font mb-1 glow-text">Submit Your Research Paper</h5>
+            <h5 className="text-warning display-font mb-1 glow-text">Submit Your Work</h5>
             <p className="text-secondary small mb-0" style={{ maxWidth: '750px' }}>
-              We encourage all Delhi University students to submit high-quality essays, political analyses, and book reviews. 
+              We encourage all Delhi University students to submit high-quality research papers and articles. 
               Submissions undergo standard peer evaluation by our editorial board. Uploads must be in PDF format.
             </p>
           </div>
           {token ? (
             <Link to="/submissions" className="btn glow-btn d-flex align-items-center gap-2 text-nowrap">
-              <FaPlus /> Submit Journal
+              <FaPlus /> Submit Work
             </Link>
           ) : (
             <Link to="/login" className="btn outline-gold-btn d-flex align-items-center gap-2 text-nowrap">
@@ -137,7 +142,7 @@ export const Journals = () => {
                         rel="noreferrer"
                         className="btn outline-gold-btn py-1.5 px-3 d-flex align-items-center gap-2 small"
                       >
-                        Read Paper <FaExternalLinkAlt style={{ fontSize: '0.75rem' }} />
+                        Read Document <FaExternalLinkAlt style={{ fontSize: '0.75rem' }} />
                       </a>
                     </div>
                     {journal.tags && (
@@ -156,7 +161,7 @@ export const Journals = () => {
         ) : (
           <div className="text-center py-5 glass-card rounded-4 border border-warning" style={{ background: 'rgba(17,24,39,0.3)' }}>
             <FaBook className="text-secondary fs-1 mb-3 opacity-50" />
-            <p className="text-secondary mb-0">No approved journals match the search query.</p>
+            <p className="text-secondary mb-0">No approved {activeTab}s match the search query.</p>
           </div>
         )}
       </div>

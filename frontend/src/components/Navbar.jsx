@@ -62,7 +62,7 @@ export const Navbar = () => {
               <Link className="nav-link text-light px-3" to="/gallery">Gallery</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light px-3" to="/journals">Journals</Link>
+              <Link className="nav-link text-light px-3" to="/journals">Publications</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link px-3 text-warning fw-semibold d-flex align-items-center" to="/mun">

@@ -389,7 +389,7 @@ export const AdminDashboard = () => {
               <div className="list-group list-group-flush gap-2">
                 {[
                   { id: 'analytics', label: 'Overview Panel', icon: <FaChartBar /> },
-                  { id: 'journals', label: 'Journal Review', icon: <FaBook /> },
+                  { id: 'journals', label: 'Publications Review', icon: <FaBook /> },
                   { id: 'events', label: 'Manage Events', icon: <FaCalendarCheck /> },
                   { id: 'gallery', label: 'Manage Gallery', icon: <FaImages /> },
                   { id: 'resources', label: 'Manage Resources', icon: <FaNewspaper /> },
@@ -495,7 +495,7 @@ export const AdminDashboard = () => {
                   )}
 
                   {/* All Active Journals list */}
-                  <h5 className="text-light display-font mb-3">Published Journals Catalog ({allJournals.length})</h5>
+                  <h5 className="text-light display-font mb-3">Published Publications Catalog ({allJournals.length})</h5>
                   <div className="table-responsive">
                     <table className="table table-custom">
                       <thead>

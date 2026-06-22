@@ -111,7 +111,7 @@ export const About = () => {
           >
             {[
               { role: "Chief Advisor", name: "Harshit Goel", dept: "English, Kirori Mal College", image: "/images/Harshit_goel_ce.jpeg" },
-              { role: "Chief Advisor", name: "Tatsat Srivastava", dept: "Political Science, Year III", image: "/images/Tatsat Srivastava.jpeg" },
+              { role: "Chief Advisor", name: "Tatsat Srivastava", dept: "Political Science, Year III", image: "/images/TatsatSrivastava.jpeg" },
               { role: "President", name: "Paawani Pandey", dept: "Political Science, Year III", image: "/images/PaawaniPandey.jpeg" },
               { role: "Vice President", name: "Rohan Kumar", dept: "History, Year III", image: "/images/RohanKumar.jpeg" },
               { role: "Secretary ", name: "Anvesha Singh", dept: "History, Year III", image: "/images/AnveshaSingh.jpeg" },

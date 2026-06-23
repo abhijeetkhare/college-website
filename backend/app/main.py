@@ -126,13 +126,12 @@ def seed_database():
                 db.add(setting)
         db.commit()
 
-        # Seed Default Gallery Categories
-        default_categories = ["General", "Debating", "Literary", "MUN"]
-        for cat_name in default_categories:
-            cat = db.query(GalleryCategory).filter(GalleryCategory.name == cat_name).first()
-            if not cat:
+        # Seed Default Gallery Categories ONLY if database is empty
+        if db.query(GalleryCategory).count() == 0:
+            default_categories = ["General", "Debating", "Literary", "MUN"]
+            for cat_name in default_categories:
                 db.add(GalleryCategory(name=cat_name))
-        db.commit()
+            db.commit()
 
     except Exception as e:
         print(f"Error during seeding: {str(e)}")

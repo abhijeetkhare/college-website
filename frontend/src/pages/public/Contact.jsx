@@ -119,12 +119,12 @@ export const Contact = () => {
                       <span className="text-secondary small d-block">
                         +91-63882-40094
                       </span>
-                      <span className="text-secondary small d-block">
+                      {/* <span className="text-secondary small d-block">
                         +91-96742-64121
                       </span>
                       <span className="text-secondary small d-block">
                         +91-62070-82264
-                      </span>
+                      </span> */}
                     </div>
                   </div>
 

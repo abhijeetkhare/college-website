@@ -6,6 +6,7 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 // Layout components
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 
 // Public pages
 import { Home } from './pages/public/Home';
@@ -34,6 +35,7 @@ import './index.css';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AuthProvider>
         <div className="d-flex flex-column" style={{ minHeight: '100vh', backgroundColor: '#0b0f19' }}>
           <Navbar />
